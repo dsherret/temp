@@ -1,5 +1,6 @@
 {
   "name": "@david/temp",
+  "version": "0.0.0",
   "exports": "./mod.ts",
   "lint": {
     "rules": {
