@@ -19,7 +19,8 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           deno lint
-          deno doc --lint mod.ts
+          # todo: renable after https://github.com/denoland/deno/issues/27364 is fixed
+          # deno doc --lint mod.ts
 
       - name: Tests
         run: deno test -A
