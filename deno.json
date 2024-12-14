@@ -1,0 +1,12 @@
+{
+  "name": "@david/temp",
+  "exports": "./mod.ts",
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "imports": {
+    "@david/path": "jsr:@david/path@0.2"
+  }
+}
