@@ -74,7 +74,7 @@ export class TempDir {
   /** Deletes the temporary directory. */
   [Symbol.dispose]() {
     try {
-      Deno.removeSync(this.toString());
+      Deno.removeSync(this.toString(), { recursive: true });
     } catch {
       // ignore
     }
@@ -83,7 +83,7 @@ export class TempDir {
   /** Deletes the temporary directory asynchronously. */
   async [Symbol.asyncDispose]() {
     try {
-      await Deno.remove(this.toString());
+      await Deno.remove(this.toString(), { recursive: true });
     } catch {
       // ignore
     }
