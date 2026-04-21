@@ -14,6 +14,9 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: 2.x
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
 
       - name: lint
         if: runner.os == 'Linux'
