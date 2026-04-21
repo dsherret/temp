@@ -1,6 +1,17 @@
 {
   "name": "@david/temp",
   "exports": "./mod.ts",
+  "tasks": {
+    "test": "deno test -P",
+    "test:node": "npx --yes github:dsherret/deno-test#fix_work_on_windows"
+  },
+  "test": {
+    "permissions": {
+      "env": true,
+      "read": true,
+      "write": true
+    }
+  },
   "lint": {
     "rules": {
       "exclude": ["no-explicit-any"]

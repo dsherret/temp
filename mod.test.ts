@@ -4,7 +4,7 @@ import { Path } from "@david/path";
 
 Deno.test("readme example", async () => {
   async function tempFileExample() {
-    await using tempFile = await createTempFile();// also has a sync api
+    await using tempFile = await createTempFile(); // also has a sync api
 
     await tempFile.writeText("some data");
 
@@ -12,7 +12,7 @@ Deno.test("readme example", async () => {
   }
 
   function tempDirExampleSync() {
-    using tempDir = createTempDirSync();// also has an async api
+    using tempDir = createTempDirSync(); // also has an async api
 
     tempDir.join("data.txt").writeTextSync("some data");
 

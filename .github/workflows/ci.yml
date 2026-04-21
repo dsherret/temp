@@ -22,8 +22,10 @@ jobs:
           # todo: renable after https://github.com/denoland/deno/issues/27364 is fixed
           # deno doc --lint mod.ts
 
-      - name: Tests
-        run: deno test -A
+      - name: Test Deno
+        run: deno test -P
+      - name: Test Node.js
+        run: deno task test:node
 
   publish:
     permissions:
